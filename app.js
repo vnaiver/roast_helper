@@ -223,8 +223,7 @@ function sendWS(msg) {
 // ---------- WebSocket ----------
 function connectWS() {
     if (ws) { ws.onclose = null; ws.close(); }
-    const host = window.location.hostname;
-    ws = new WebSocket('ws://' + host + '/ws');
+    ws = new WebSocket('ws://192.168.4.1/ws');
 
     ws.onopen = function () {
         statusEl.innerHTML = '● 已连接';
