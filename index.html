@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coffee Roaster</title>
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+</head>
+<body>
+
+<h1>Coffee Roaster</h1>
+
+<div class="cards">
+  <div class="card">
+    <div class="label">Temperature</div>
+    <div class="value" id="temp">---<span class="unit">&deg;C</span></div>
+  </div>
+  <div class="card">
+    <div class="label">ROR</div>
+    <div class="value" id="ror">---<span class="unit">&deg;C/min</span></div>
+  </div>
+</div>
+
+<div class="chart-box">
+  <canvas id="chart"></canvas>
+</div>
+
+<div class="bottom-bar">
+  <button id="startBtn" onclick="handleStartReset()">开始</button>
+  <button id="markBtn" onclick="addMark()" disabled>标记</button>
+  <span class="status" id="status">● 未连接</span>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
